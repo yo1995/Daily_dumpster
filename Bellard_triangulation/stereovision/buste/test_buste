@@ -1,0 +1,4 @@
+../correl --threshold1 0.4 --dmin -20 --dmax 20 -f 16 \
+ -r hop_10.rect -p proj hop_10.c1.pgm hop_10.c2.pgm
+  
+

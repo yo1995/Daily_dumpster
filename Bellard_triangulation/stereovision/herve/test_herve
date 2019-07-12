@@ -1,0 +1,2 @@
+../correl -m -f 8 --threshold1 0.5 --threshold2 0.001 --dmin -60 --dmax 0 \
+     -p tdir herve.1.pgm herve.2.pgm

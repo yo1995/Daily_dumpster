@@ -1,0 +1,55 @@
+sterevision version 1.00 
+(c) 1996-1998 Fabrice Bellard (http://www.mygale.org/~bellard)
+[This program is released under the GNU GPL Licence]
+
+Overview:
+---------
+
+This package allows to convert two images of the same object into a
+three dimensional description. You must know the basis of stereovision
+to use this program. This package uses the correlation method to
+extract the 3D information. It works very well on textured objects.
+
+The basic stages of the 3D reconstruction are:
+
+1) Extraction the camera parameters, in order to know at which places
+the camera are and what are their optical parameters.
+
+2) The rectification which transforms the two images such that the
+correlation can be done only on the corresponding horizontal lines.
+
+3) The correlation which finds the same regions in the two images.
+
+4) The filtering to correct the errors of the correlation.
+
+5) The conversion of the horizontal offsets of the correlation into 3D positions.
+
+6) The visualisation of the result.
+
+The program 'rectify' does the first step. The program 'correl' does
+the other steps.
+
+
+Installation:
+-------------
+
+Edit the Makefile. You must have OpenGL (or Mesa) to use the
+program. Type 'make'. Everything should be compiled.
+
+
+Testing:
+--------
+
+Run the scripts
+
+ buste/test_buste
+
+and
+
+ herve/test_herve.
+
+The latter is rendered with texture mapping.
+
+
+Feel free to improve this program - send me your patches !
+
